@@ -1,5 +1,11 @@
 Lancez les commandes suivantes :  
 ```
+symfony composer install
+```
+```
+yarn install
+```
+```
 symfony serve
 ```
 et
