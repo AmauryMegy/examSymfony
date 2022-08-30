@@ -1,0 +1,39 @@
+{% extends 'back/base.html.twig' %}
+
+{% block title %}
+    Les models
+{% endblock %}
+
+{% block body %}
+    <h1>Les models</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for model in models %}
+            <tr>
+                <td>{{ model.id }}</td>
+                <td>{{ model.name }}</td>
+                <td>{{ model.description }}</td>
+                <td>
+                    <a href="{{ path('app_admin_model_show', {'id': model.id}) }}">Voir</a>
+                    <a href="{{ path('app_admin_model_edit', {'id': model.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_admin_model_new') }}">Create new</a>
+{% endblock %}

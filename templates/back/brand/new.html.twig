@@ -1,0 +1,10 @@
+{% extends 'back/base.html.twig' %}
+<title>New Brand</title>
+
+{% block body %}
+    <h1>Create new Brand</h1>
+
+    {{ include('back/brand/_form.html.twig') }}
+
+    <a href="{{ path('app_admin_brand_index') }}">back to list</a>
+{% endblock %}

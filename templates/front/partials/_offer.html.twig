@@ -1,0 +1,18 @@
+
+    <div class="card flex-row text-center">
+        <div class="container-image me-2">
+            <img src="https://picsum.photos/200" alt="Photo de l'offre {{ offer.title }}">
+        </div>
+        <div class="card-main">
+            <a class="card-offer" href="{{ path('app_listing_show', {'id': offer.id}) }}">
+                <h2>{{ offer.title }}</h2>
+            </a>
+            <div class="card-infos d-flex justify-content-evenly me-2">
+                <p>{{ offer.mileage }} km</p>
+                <p>{{ offer.price }} €</p>
+            </div>
+            <div class="publish">
+                <p>Publié le {{ offer.createdAt | date('d/m/Y') }}</p>
+            </div>
+        </div>
+    </div>

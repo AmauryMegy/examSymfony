@@ -1,0 +1,46 @@
+
+<div class="ps-4 pt-4 admin-menu">
+
+    <h4>Marques</h4>
+    <ul class="list-unstyled ps-4">
+        <li>
+            <a href="{{ path('app_admin_brand_index') }}"
+               class="{% if app.request.pathinfo == path('app_admin_brand_index') %}menu-active{% endif %}"
+            >
+                Liste des marques
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('app_admin_brand_new') }}"
+               class="{% if app.request.pathinfo == path('app_admin_brand_new') %}menu-active{% endif %}"
+            >
+                Ajouter une marque
+            </a>
+        </li>
+    </ul>
+    <hr>
+
+    <h4>Model</h4>
+    <ul class="list-unstyled ps-4">
+        <li>
+            <a href="{{ path('app_admin_model_index') }}"
+               class="{% if app.request.pathinfo == path('app_admin_model_index') %}menu-active{% endif %}"
+            >
+                Liste des models
+            </a>
+        </li>
+        <li>
+            <a href="{{ path('app_admin_model_new') }}"
+               class="{% if app.request.pathinfo == path('app_admin_model_new') %}menu-active{% endif %}"
+            >
+                Ajouter un model
+            </a>
+        </li>
+    </ul>
+    <hr>
+
+    <a href="{{ path('app_home') }}">
+        Retour au site
+    </a>
+
+</div>

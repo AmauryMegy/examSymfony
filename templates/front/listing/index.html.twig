@@ -1,14 +1,15 @@
 {% extends 'front/base.html.twig' %}
 
-{% block title %}La Tangente{% endblock %}
+{% block title %}Nos offres{% endblock %}
 
 {% block body %}
+    <a href="{{ path('app_listing_new') }}">Créer une annonce</a>
+
     <div class="container">
         <div class="d-flex justify-content-between">
-            <h1 class="mt-3 mb-4">Nos offres les plus récentes</h1>
-            <a class="btn btn-primary h-50 my-auto" href="{{ path('app_listing_index') }}">
-                Voir tout
-            </a>
+            <h1 class="mt-3 mb-4">Toutes nos offres</h1>
+        </div>
+        <div class="navigation d-flex justify-content-center my-3">
         </div>
         <div class="row">
             {% for offer in listings %}
@@ -17,5 +18,9 @@
                 </div>
             {% endfor %}
         </div>
+        <div class="navigation d-flex justify-content-center mt-2">
+            {{ knp_pagination_render(listings) }}
+        </div>
     </div>
+
 {% endblock %}
